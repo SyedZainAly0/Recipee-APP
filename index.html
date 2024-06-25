@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata and linking CSS and JS files -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation bar with Bootstrap classes -->
+
+
+
+    <!-- navbar: This is a base class in Bootstrap that applies basic styles to a navigation bar.
+    Using navbar-expand-lg, the navigation bar will expand horizontally starting from large devices (≥992px).
+    Has a base navbar styling.
+    Expands horizontally on large screens and remains collapsible on smaller screens.
+    Uses a light theme with dark text for contrast (navbar-light).
+    Has a light gray background (bg-light). -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <!-- The container-fluid class in Bootstrap is used to create a full-width container that spans the entire width of the viewport -->
+        <div class="container-fluid">
+
+            <!-- navbar-brand class in Bootstrap is used to style a brand name or logo within a navigation bar.
+            styling 
+            positioning. -->
+            <a class="navbar-brand" href="#">Recipe Search</a>
+
+            <!-- What it does: This button allows users to show or hide the navigation menu when they click on it. It's
+            especially useful on smaller screens, like phones, where the full menu might not be visible by default. -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- When these classes are combined (collapse navbar-collapse), they make the navigation menu items collapsible
+            on smaller screens. This means that on mobile devices, the navigation menu can be toggled (shown or hidden)
+            with a button, -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="ml-auto" id="parent-nav">
+                    <li class="nav-item"><a class="nav-link" href="#" id="shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="recipes">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="club">Recipe Club</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="pizza">Pizza</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content section with Bootstrap classes -->
+    <div class="container mt-5">
+        <h1 class="text-center" id="recipe-title">Recipes</h1>
+        <div class="row justify-content-center mt-4">
+
+            <!-- 
+            The col-md-6 class in Bootstrap is used to create a responsive column in a grid layout that spans 6 out of
+            12 columns on medium-sized screens and larger. Bootstrap uses a 12-column grid system, and this class is
+            part of that system. -->
+            <div class="col-md-6">
+
+
+                <div class="input-group">
+                    <input type="text" class="form-control" id="search-bar" placeholder="name of dish...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" id="search-button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row mt-4" id="recipe-container">
+            <!-- Recipe results will be displayed here -->
+        </div>
+
+
+    </div>
+
+    <!-- Optional JavaScript for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
